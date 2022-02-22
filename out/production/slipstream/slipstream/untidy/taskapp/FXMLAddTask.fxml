@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slipstream.untidy.taskapp.AddTaskController">
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <Label id="addTaskLabel" fx:id="addTasklabel" text="ADD TASK"/>
+         </children>
+      </HBox>
+      <TabPane tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="BASIC DETAILS">
+               <content>
+                  <VBox>
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="TASK NAME" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="20.0" top="5.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="3.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="TASKNAME" minWidth="380.0">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin></TextField>
+                              <Button fx:id="validate" mnemonicParsing="false" onMouseClicked="#handlevalidate" text="VALIDATE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label text="CLOSEST EXISTING TASKS:">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </Label>
+                        <ListView fx:id="NAMESEARCH" />
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+          <Tab text="TASKS BEFORE">
+               <content>
+                  <VBox prefWidth="100.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <TextField fx:id="PRESEARCHFIELD" minWidth="300.0" prefHeight="26.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button fx:id="searchpre" mnemonicParsing="false" onMouseClicked="#handlepresearch" text="SEARCH">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="addnewpre" mnemonicParsing="false" onMouseClicked="#handleaddnewpre" text="ADD NEW">
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label text="SEARCH RESULTS:">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ListView fx:id="PRESEARCH" prefHeight="150.0" />
+                        <HBox>
+                           <children>
+                              <Label contentDisplay="CENTER" prefHeight="25.0" prefWidth="150.0" text="ADDED PREREQUISITES">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button fx:id="addselectedpre" mnemonicParsing="false" onMouseClicked="#handleaddselectedpre" text="ADD SELECTED">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="removepre" mnemonicParsing="false" onMouseClicked="#handleremovepre" text="REMOVE SELECTED">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <ListView fx:id="PRELIST" prefHeight="150.0" />
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+            <Tab text="TASKS AFTER">
+               <content>
+                  <VBox>
+                     <children>
+                        <HBox>
+                           <children>
+                              <TextField fx:id="POSTSEARCHFIELD" minWidth="300.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button fx:id="searchpost" mnemonicParsing="false" onMouseClicked="#handlepostsearch" text="SEARCH">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="addnewpost" mnemonicParsing="false" onMouseClicked="#handleaddnewpost" text="ADD NEW">
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label text="SEARCH RESULTS:">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ListView fx:id="POSTSEARCH" prefHeight="150.0" />
+                        <HBox>
+                           <children>
+                              <Label contentDisplay="CENTER" prefHeight="25.0" prefWidth="150.0" text="ADDED POSTREQUISITES">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button fx:id="addselectedpost" mnemonicParsing="false" onMouseClicked="#handleaddselectedpost" text="ADD SELECTED">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="removepost" mnemonicParsing="false" onMouseClicked="#handleremovepost" text="REMOVE SELECTED">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <ListView fx:id="POSTLIST" prefHeight="150.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab text="PERM BEFORE">
+               <content>
+                  <VBox prefWidth="100.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <TextField fx:id="PERMPRESEARCHFIELD" minWidth="300.0" prefHeight="26.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button fx:id="PERMsearchpre" mnemonicParsing="false" onMouseClicked="#handlepermpresearch" text="SEARCH">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="PERMaddnewpre" mnemonicParsing="false" onMouseClicked="#handleaddnewpermpre" text="ADD NEW">
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label text="SEARCH RESULTS:">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ListView fx:id="PERMPRESEARCH" prefHeight="150.0" />
+                        <HBox>
+                           <children>
+                              <Label contentDisplay="CENTER" prefHeight="25.0" prefWidth="150.0" text="ADDED PREREQUISITES">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button fx:id="PERMaddselectedpre" mnemonicParsing="false" onMouseClicked="#handleaddselectedpermpre" text="ADD SELECTED">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="PERMremovepre" mnemonicParsing="false" onMouseClicked="#handleremovepermpre" text="REMOVE SELECTED">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <ListView fx:id="PERMPRELIST" prefHeight="150.0" />
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+            <Tab text="PERM AFTER">
+               <content>
+                  <VBox>
+                     <children>
+                        <HBox>
+                           <children>
+                              <TextField fx:id="PERMPOSTSEARCHFIELD" minWidth="300.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button fx:id="PERMsearchpost" mnemonicParsing="false" onMouseClicked="#handlepermpostsearch" text="SEARCH">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="PERMaddnewpost" mnemonicParsing="false" onMouseClicked="#handleaddnewpermpost" text="ADD NEW">
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label text="SEARCH RESULTS:">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ListView fx:id="PERMPOSTSEARCH" prefHeight="150.0" />
+                        <HBox>
+                           <children>
+                              <Label contentDisplay="CENTER" prefHeight="25.0" prefWidth="150.0" text="ADDED POSTREQUISITES">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button fx:id="PERMaddselectedpost" mnemonicParsing="false" onMouseClicked="#handleaddselectedpermpost" text="ADD SELECTED">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="PERMremovepost" mnemonicParsing="false" onMouseClicked="#handleremovepermpost" text="REMOVE SELECTED">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <ListView fx:id="PERMPOSTLIST" prefHeight="150.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <HBox alignment="CENTER">
+         <children>
+            <Button fx:id="savetask" alignment="CENTER" contentDisplay="CENTER" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#handlesavetask" text="SAVE">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="canceltask" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#handlecanceltask" text="CANCEL">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

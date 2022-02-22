@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slipstream.untidy.taskapp.TaskViewController">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="5.0">
+         <children>
+            <Button fx:id="addTaskButton" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleAddTaskButton" style="-fx-background-color: #808080;" text="Add Task" />
+            <Button fx:id="modifyTaskButton" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleModifyTaskButton" style="-fx-background-color: #808080;" text="Modify Task" />
+            <Button fx:id="deleteButton" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleDeleteButton" style="-fx-background-color: #808080;" text="Delete Task" />
+            <Button fx:id="saveButton" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleSaveButton" style="-fx-background-color: #808080;" text="Save List" />
+            <Button fx:id="openButton" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleOpenButton" style="-fx-background-color: #808080;" text="Open" />
+            <Button fx:id="exitButton" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleExitButton" style="-fx-background-color: #808080;" text="Close" />
+            <Button fx:id="searchButton" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#searchTasks" style="-fx-background-color: #808080;" text="Search" />
+            <Button fx:id="BoggleButton" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleBoggle" style="-fx-background-color: #808080;" text="Boggle" />
+            <Button fx:id="MarkComplete" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleMarkComplete" style="-fx-background-color: #808080;" text="Mark Done" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <TreeTableView fx:id="tasktable" showRoot="false" style="-fx-background-color: #303030;" VBox.vgrow="ALWAYS">
+        <columns>
+          <TreeTableColumn fx:id="tasknamecol" editable="false" minWidth="400.0" prefWidth="600.0" sortable="false" text="C1" />
+          <TreeTableColumn fx:id="taskprioritycol" editable="false" minWidth="150.0" prefWidth="150.0" resizable="false" text="C2" />
+        </columns>
+      </TreeTableView>
+   </children>
+</VBox>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slipstream.untidy.taskapp.MinimalAddTaskController">
+   <children>
+      <TextField fx:id="NEWTASKFIELD" minWidth="300.0" promptText="Enter new task name" />
+      <HBox alignment="CENTER">
+         <children>
+            <Button fx:id="addButton" minWidth="60.0" mnemonicParsing="false" onMouseClicked="#handleAdd" text="Add" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="cancelButton" minWidth="60.0" mnemonicParsing="false" onMouseClicked="#handleCancel" text="Cancel" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

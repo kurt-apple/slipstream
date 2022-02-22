@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="slipstream.jnlp">
+  <information>
+    <title>slipstream</title>
+    <vendor>Unknown</vendor>
+    <description>slipstream</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="slipstream.jar" size="80149" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="slipstream.untidy.taskapp.SGUI3"  name="slipstream" />
+  <update check="background"/>
+</jnlp>

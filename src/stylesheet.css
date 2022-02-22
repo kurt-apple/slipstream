@@ -1,0 +1,61 @@
+.tree-table-cell, .tree-table-view, .table-view {
+    -fx-border-color: #202020;
+    -fx-background-color: #202020;
+    -fx-table-cell-border-color: #202020;
+    -fx-text-fill: white;
+}
+
+.tree-table-row-cell:selected > .cell {
+    -fx-border-color: lightgrey;
+    -fx-background-color: lightgrey;
+    -fx-table-cell-border-color: lightgrey;
+    -fx-text-fill: black;
+}
+
+.indexed-cell:filled:hover > .cell {
+    -fx-border-color: #606060;
+    -fx-background-color: #606060;
+    -fx-table-cell-border-color: #606060;
+}
+
+.tree-table-row-cell:child-of-selected > .cell {
+    -fx-border-color: #101040;
+    -fx-background-color: #101040 ;
+    -fx-table-cell-border-color: #101040;
+    -fx-text-fill: white;
+}
+
+.tree-table-row-cell:parent-of-selected > .cell {
+    -fx-border-color: #606060;
+    -fx-background-color: #606060 ;
+    -fx-table-cell-border-color: #606060;
+}
+
+.tree-table-row-cell:needs-breakdown > .cell {
+    -fx-border-color: red;
+    -fx-background-color: red;
+    -fx-table-cell-border-color: red;
+}
+
+.tree-table-row-cell:wow-so-important > .cell {
+    -fx-border-color: yellow;
+    -fx-background-color: yellow;
+    -fx-table-cell-border-color: yellow;
+    -fx-text-fill: black;
+}
+
+.tree-table-row-cell:implication-important > .cell {
+    -fx-border-color: salmon;
+    -fx-background-color: salmon;
+    -fx-table-cell-border-color: salmon;
+    -fx-text-fill: black;
+}
+
+.button {
+    -fx-background-color: #808080;
+    -fx-text-fill: white;
+}
+
+HBox, VBox {
+    -fx-background-color: #202020;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slipstream.untidy.taskapp.SearchWindowController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="searchField" />
+            <Button fx:id="searchButton" mnemonicParsing="false" onMouseClicked="#searchTaskList" text="Search" />
+            <Button fx:id="modifyButton" mnemonicParsing="false" onMouseClicked="#modifyTask" text="Details/Modify" />
+            <Button fx:id="srchback" mnemonicParsing="false" onMouseClicked="#srchbackhandle" text="Back" />
+         </children>
+      </HBox>
+      <ListView fx:id="searchResults" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</VBox>
